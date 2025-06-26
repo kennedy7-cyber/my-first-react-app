@@ -9,6 +9,7 @@ const App = () => {
       <Homepage/>
       <About />
       <Footer/>
+      <buttons/>
 
 
 
