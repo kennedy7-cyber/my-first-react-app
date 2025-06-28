@@ -1,24 +1,13 @@
 import React from "react";
-import { Navbar } from "./components";
-import { About, Footer, Homepage } from "./pages";
+import { Footer, Navbar } from "./components";
+import { Outlet } from "react-router-dom";
 
 const App = () => {
   return (
     <div>
       <Navbar />
-      <Homepage/>
-      <About />
-      <Footer/>
-      <buttons/>
-
-
-
-
-
-
-
-      
-
+      <Outlet />
+      <Footer />
     </div>
   );
 };
