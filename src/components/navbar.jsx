@@ -1,11 +1,64 @@
 import React from "react";
+import { GiTeePipe } from "react-icons/gi";
 
 const Navbar = () => {
+  const plumbingServices = [
+    {
+      name: "Leak Detection & Repair",
+      link: "services",
+      icon: <GiTeePipe />,
+    },
+    {
+      name: "Drain Cleaning",
+      link: "services",
+      icon: <GiTeePipe />,
+    },
+    {
+      name: "Toilet Installation & Repair",
+      link: "services",
+      icon: <GiTeePipe />,
+    },
+    {
+      name: "Water Heater Services",
+      link: "services",
+      icon: <GiTeePipe />,
+    },
+    {
+      name: "Pipe Installation & Repiping",
+      link: "services",
+      icon: <GiTeePipe />,
+    },
+    {
+      name: "Emergency Plumbing",
+      link: "services",
+      icon: <GiTeePipe />,
+    },
+    {
+      name: "Gas Line Services",
+      link: "services",
+      icon: <GiTeePipe />,
+    },
+    {
+      name: "Sewer Line Repair",
+      link: "services",
+      icon: <GiTeePipe />,
+    },
+    {
+      name: "Fixture Installation",
+      link: "services",
+      icon: <GiTeePipe />,
+    },
+    {
+      name: "Backflow Prevention",
+      link: "services",
+      icon: <GiTeePipe />,
+    },
+  ];
   return (
     <nav className="navbar navbar-expand-lg fixed-top bg-body-tertiary">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          Navbar
+          Nex pipe tech
         </a>
         <button
           className="navbar-toggler"
@@ -36,40 +89,30 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Blogs{" "}
+              <a className="nav-link" href="blog-in">
+                Blogs
               </a>
             </li>
 
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
-                href="#"
+                href="services"
                 role="button"
-                data-bs-toggle="dropdown"
+                // data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Dropdown
+                Services
               </a>
               <ul className="dropdown-menu">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />{" "}
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Something else here
-                  </a>
-                </li>
+                {plumbingServices.map((item, index) => (
+                  <li>
+                    <span>{item.icon}</span>
+                    <a className="dropdown-item" href="services">
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </li>
           </ul>

@@ -1,137 +1,79 @@
 
-import React from "react";
+import React from 'react';
+import { Container, Row, Col, Card, Button, Modal } from 'react-bootstrap';
 
 const About = () => {
+  
+  const [show, setShow] = React.useState(false);
   return (
-    <div className="container-fluid">
-      {/* Fixed heading */}
-      <h1 className="position-fixed text-center top-0 start-0 w-100 bg-white py-3 shadow">
-        Our Global Partners
-      </h1>
+    <div className='py-4 px-5'>
+    <Container className="py-5">
+      <h1 className="text-center mb-4">About Our Plumbing Company</h1>
+      <Row className="align-items-center mb-5">
+        <Col md={6}>
+          <img
+            src="https://images.unsplash.com/photo-1609213244695-7d6902be89da"
+            alt="Our Team"
+            className="img-fluid rounded shadow"
+          />
+        </Col>
+        <Col md={6}>
+          <h2>5 Years of Trusted Service</h2>
+          <p>We’ve served residential and commercial clients with reliable, affordable, and innovative plumbing solutions for the past 5 years.</p>
+          <ul>
+            <li>🚰 Licensed & insured professionals</li>
+            <li>24/7 Emergency response</li>
+            <li>Certified in backflow prevention</li>
+          </ul>
+          <Button variant="primary" onClick={() => setShow(true)}>
+            Learn More
+          </Button>
+        </Col>
+      </Row>
 
-      {/* Offset content to prevent overlap with fixed header */}
-      <div className="pt-5 mt-5">
-        <div className="row g-4 px-4">
-          {/* Image Cards */}
-          {[
-            "https://images.unsplash.com/photo-1750126833705-ba98013f16f3",
-            "https://images.unsplash.com/photo-1750190437388-862aeca97f9e",
-            "https://images.unsplash.com/photo-1742268582641-7dbe0ea10c82",
-            "https://images.unsplash.com/photo-1743701168213-89acf87d972c",
-          ].map((url, index) => (
-            <div className="col-sm-6 col-lg-3" key={index}>
-              <div className="card h-100 shadow-sm">
-                <img src={`${url}?w=500&auto=format&fit=crop&q=60`} className="card-img-top" alt={`Partner ${index + 1}`} />
-              </div>
-            </div>
-          ))}
-        </div>
+      <Row>
+        {[{
+          icon: '⏱️', title: 'Fast Response', text: 'Rapid dispatch for emergencies.',
+        },{
+          icon: '💵', title: 'Transparent Pricing', text: 'No hidden fees, upfront quotes.',
+        },{
+          icon: '👷‍♂️', title: 'Expert Technicians', text: 'Experienced, friendly staff.',
+        }].map((item, idx) => (
+          <Col md={4} key={idx} className="mb-4">
+            <Card className="text-center h-100 shadow-sm">
+              <Card.Body>
+                <div style={{ fontSize: '2rem' }}>{item.icon}</div>
+                <Card.Title className="mt-3">{item.title}</Card.Title>
+                <Card.Text>{item.text}</Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
 
-        {/* About Us Button */}
-        <div className="text-center my-5">
-          <button
-            type="button"
-            className="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#aboutModal"
-          >
-            About Us
-          </button>
-        </div>
+      {/* Modal */}
+      <Modal show={show} onHide={() => setShow(false)} size="lg">
+        <Modal.Header closeButton>
+          <Modal.Title>About Us</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <h5>Our Mission</h5>
+          <p>
+            We are dedicated to delivering reliable plumbing services, ensuring transparency and excellence in every job.
+          </p>
 
-        {/* Modal */}
-        <div
-          className="modal fade"
-          id="aboutModal"
-          tabIndex="-1"
-          aria-labelledby="aboutModalLabel"
-          aria-hidden="true"
-        >
-          <div className="modal-dialog modal-lg">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h5 className="modal-title" id="aboutModalLabel">About Us</h5>
-                <button
-                  type="button"
-                  className="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-
-              <div className="modal-body">
-                {/* Tabs */}
-                <ul className="nav nav-tabs" id="aboutTab" role="tablist">
-                  <li className="nav-item" role="presentation">
-                    <button
-                      className="nav-link active"
-                      id="mission-tab"
-                      data-bs-toggle="tab"
-                      data-bs-target="#mission"
-                      type="button"
-                      role="tab"
-                      aria-controls="mission"
-                      aria-selected="true"
-                    >
-                      Our Mission
-                    </button>
-                  </li>
-                  <li className="nav-item" role="presentation">
-                    <button
-                      className="nav-link"
-                      id="team-tab"
-                      data-bs-toggle="tab"
-                      data-bs-target="#team"
-                      type="button"
-                      role="tab"
-                      aria-controls="team"
-                      aria-selected="false"
-                    >
-                      Our Team
-                    </button>
-                  </li>
-                </ul>
-
-                {/* Tab Content */}
-                <div className="tab-content py-3" id="aboutTabContent">
-                  <div
-                    className="tab-pane fade show active"
-                    id="mission"
-                    role="tabpanel"
-                    aria-labelledby="mission-tab"
-                  >
-                    <h6>Our Mission</h6>
-                    <p>
-                      We aim to provide the best solutions to our clients by delivering reliable, affordable, and innovative services across the globe.
-                    </p>
-                  </div>
-                  <div
-                    className="tab-pane fade"
-                    id="team"
-                    role="tabpanel"
-                    aria-labelledby="team-tab"
-                  >
-                    <h6>Our Team</h6>
-                    <p>
-                      Meet our dedicated team of professionals, each bringing unique experience and expertise to help us serve better.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="modal-footer">
-                <button
-                  type="button"
-                  className="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Close
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+          <h5>Meet Our Team</h5>
+          <p>
+            A dedicated crew of certified plumbers and specialists, passionate about quality and customer satisfaction.
+          </p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setShow(false)}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </Container>
     </div>
   );
 };
