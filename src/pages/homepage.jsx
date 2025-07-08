@@ -106,7 +106,7 @@ const Homepage = () => {
       </div>
 
       {/* Welcome Section */}
-      <div className="px-5 py-4 bg-dark-subtle">
+      <div className="px-5 py-4 ">
         <div className="p-3">
           <h1 className="text-center fw-bold py-2">
             Explore the world with us
@@ -130,7 +130,7 @@ const Homepage = () => {
         </div>
 
         {/* Services Cards using flex */}
-        <div className="d-flex flex-wrap gap-4 justify-content-center px-lg-5 px-md-3 px-2 w-100">
+        <div className="d-flex gap-4 justify-content-center px-lg-5 px-md-3 px-2 w-100">
           {services.map((service, index) => (
             <Cards
               key={index}
@@ -142,86 +142,171 @@ const Homepage = () => {
             />
           ))}
         </div>
-        <section className="bg-light py-5">
-          <div className="container">
-            <div className="row gx-4 align-items-center mb-4">
-              <div className="col-lg-4">
-                <h2 className="display-5 mb-3">What Our Clients Say</h2>
-                <p className="lead">
-                  We believe in trusted, local service. Here's what our valued
-                  clients have shared about their experiences.
-                </p>
-              </div>
-              <div className="col-lg-8">
-                <div className="row gy-4">
-                  {/* Testimonial Card */}
-                  <div className="col-md-6">
-                    <div className="card border-0 border-bottom border-primary shadow-sm">
-                      <div className="card-body p-4">
-                        <figure className="text-center mb-4">
-                          <img
-                            src="https://randomuser.me/api/portraits/women/65.jpg"
-                            alt="Client Photo"
-                            className="img-fluid rounded-circle border border-4"
-                            style={{ width: "80px", height: "80px" }}
-                          />
-                        </figure>
-                        <blockquote className="blockquote-icon mb-4">
-                          "Their team found and fixed a hidden pipe leak that I
-                          never would have discovered—quick, clean, and
-                          efficient!"
-                        </blockquote>
-                        <h5 className="mb-1">Jane Mwangi</h5>
-                        <p className="text-secondary small">
-                          Homeowner, Kikuyu
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="col-md-6">
-                    <div className="card border-0 border-bottom border-primary shadow-sm">
-                      <div className="card-body p-4">
-                        <figure className="text-center mb-4">
-                          <img
-                            src="https://randomuser.me/api/portraits/men/32.jpg"
-                            alt="Client Photo"
-                            className="img-fluid rounded-circle border border-4"
-                            style={{ width: "80px", height: "80px" }}
-                          />
-                        </figure>
-                        <blockquote className="blockquote-icon mb-4">
-                          "Hydrojetting their drain-clean service cleared my old
-                          kitchen pipes completely—best investment ever."
-                        </blockquote>
-                        <h5 className="mb-1">Samuel Njoroge</h5>
-                        <p className="text-secondary small">Restaurant Owner</p>
-                      </div>
-                    </div>
-                  </div>
+      
+        <section className="bg-light py-5  px-5 d-flex gap-4  px-lg-5 px-md-3 px-2 w-100 ">
+  <div className="container ">
+    <div className="row gx-4 align-items-center mb-4">
+      <div className="col-lg-4">
+        <h2 className=" mb-3">What Our Clients Say</h2>
+        <p className="lead">
+          We believe in trusted, local service. Here's what our valued
+          clients have shared about their experiences.
+        </p>
+      </div>
+      <div className="col-lg- z">
+        <div className="row gy-4">
+          {/* Testimonial Cards */}
+          {[
+            {
+              name: "Jane Mwangi",
+              role: "Homeowner, Kikuyu",
+              img: "https://randomuser.me/api/portraits/women/65.jpg",
+              quote:
+                "Their team found and fixed a hidden pipe leak that I never would have discovered—quick, clean, and efficient!",
+            },
+            {
+              name: "Samuel Njoroge",
+              role: "Restaurant Owner",
+              img: "https://randomuser.me/api/portraits/men/32.jpg",
+              quote:
+                "Hydrojetting their drain-clean service cleared my old kitchen pipes completely—best investment ever.",
+            },
+            {
+              name: "Lucy Wanjiku",
+              role: "Salon Owner",
+              img: "https://randomuser.me/api/portraits/women/22.jpg",
+              quote:
+                "Reliable and on time! Their team was respectful and left the work area spotless.",
+            },
+            {
+              name: "Kevin Otieno",
+              role: "Landlord, Embakasi",
+              img: "https://randomuser.me/api/portraits/men/41.jpg",
+              quote:
+                "I had multiple units with leaking taps—they handled everything in a single visit.",
+            },
+            {
+              name: "Miriam Kamau",
+              role: "Airbnb Host",
+              img: "https://randomuser.me/api/portraits/women/50.jpg",
+              quote:
+                "They installed my new water heater within hours of calling. Top-tier professionalism.",
+            },
+            {
+              name: "John Kariuki",
+              role: "Construction Foreman",
+              img: "https://randomuser.me/api/portraits/men/24.jpg",
+              quote:
+                "Always my first choice when subcontracting plumbing work for housing projects.",
+            },
+            {
+              name: "Alice Nduta",
+              role: "Boutique Manager",
+              img: "https://randomuser.me/api/portraits/women/30.jpg",
+              quote:
+                "The plumber was friendly and took time to explain every step. Great experience!",
+            },
+            {
+              name: "Peter Mwenda",
+              role: "IT Technician",
+              img: "https://randomuser.me/api/portraits/men/57.jpg",
+              quote:
+                "Fair pricing, fast service. I recommend them to anyone needing urgent repairs.",
+            },
+            {
+              name: "Faith Achieng",
+              role: "Office Admin",
+              img: "https://randomuser.me/api/portraits/women/44.jpg",
+              quote:
+                "They responded during an emergency at night—very grateful for their quick action.",
+            },
+            {
+              name: "Martin Kimani",
+              role: "Car Wash Owner",
+              img: "https://randomuser.me/api/portraits/men/15.jpg",
+              quote:
+                "They upgraded our entire plumbing setup. Business is running smoother than ever.",
+            },
+          ].map((client, index) => (
+            <div className="col-md-6" key={index}>
+              <div className="card border-0 border-bottom border-primary shadow-sm h-100">
+                <div className="card-body p-4">
+                  <figure className="text-center mb-4">
+                    <img
+                      src={client.img}
+                      alt={`Photo of ${client.name}`}
+                      className="img-fluid rounded-circle border border-4"
+                      style={{ width: "80px", height: "80px" }}
+                    />
+                  </figure>
+                  <blockquote className="blockquote-icon mb-4">
+                    "{client.quote}"
+                  </blockquote>
+                  <h5 className="mb-1">{client.name}</h5>
+                  <p className="text-secondary small">{client.role}</p>
                 </div>
               </div>
             </div>
-            {/* Add more rows of testimonials as needed */}
-          </div>
-        </section>
-        
-
-        {/* Company History */}
-        <div className="py-4">
-          <h1 className="text-center fw-normal text-warning-emphasis">
-            Our History
-          </h1>
-          <p className="text-center fw-light bg-danger-emphasis p-3">
-            Our plumbing company has proudly served the community for over a
-            decade, building a reputation for reliability and quality
-            workmanship. Founded by certified professionals, we began with a
-            mission to provide fast, honest, and affordable plumbing solutions.
-            We've grown through word-of-mouth, offering residential and
-            commercial services with dedication, skill, and customer
-            satisfaction.
-          </p>
+          ))}
         </div>
+      </div>
+    </div>
+    
+      {/* Floating Social Media Buttons */}
+      <div
+        style={{
+          position: "fixed",
+          right: "20px",
+          top: "45%",
+          transform: "translateY(-50%)",
+          display: "flex",
+          flexDirection: "column",
+          gap: "15px",
+          zIndex: 1000,
+        }}
+      >
+        {/* WhatsApp */}
+        <a
+          href="https://wa.me/254758849440"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/124/124034.png"
+            alt="WhatsApp"
+            style={{ width: "50px", height: "50px" }}
+          />
+        </a>
+
+        {/* Instagram */}
+        <a
+          href="https://instagram.com/yourplumbingpage"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png"
+            alt="Instagram"
+            style={{ width: "50px", height: "50px" }}
+          />
+        </a>
+
+        {/* Facebook */}
+        <a
+          href="https://facebook.com/yourplumbingpage"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/145/145802.png"
+            alt="Facebook"
+            style={{ width: "50px", height: "50px" }}
+          />
+        </a>
+  </div>
+  </div>
+</section>
+
       </div>
     </>
   );

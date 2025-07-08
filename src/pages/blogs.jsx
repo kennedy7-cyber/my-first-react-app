@@ -240,6 +240,60 @@ const Blogs = () => (
     </div>
     {/* Bootstrap */}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    
+      {/* Floating Social Media Buttons */}
+      <div
+        style={{
+          position: "fixed",
+          right: "20px",
+          top: "45%",
+          transform: "translateY(-50%)",
+          display: "flex",
+          flexDirection: "column",
+          gap: "15px",
+          zIndex: 1000,
+        }}
+      >
+        {/* WhatsApp */}
+        <a
+          href="https://wa.me/254758849440"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/124/124034.png"
+            alt="WhatsApp"
+            style={{ width: "50px", height: "50px" }}
+          />
+        </a>
+
+        {/* Instagram */}
+        <a
+          href="https://instagram.com/yourplumbingpage"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png"
+            alt="Instagram"
+            style={{ width: "50px", height: "50px" }}
+          />
+        </a>
+
+        {/* Facebook */}
+        <a
+          href="https://facebook.com/yourplumbingpage"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/145/145802.png"
+            alt="Facebook"
+            style={{ width: "50px", height: "50px" }}
+          />
+        </a>
+  </div>
   </div>
 );
 

@@ -88,7 +88,8 @@ const Navbar = () => {
                 Contact
               </a>
             </li>
-            <li className="nav-item">
+            
+          <li className="nav-item">
               <a className="nav-link" href="blog-in">
                 Blogs
               </a>
@@ -106,7 +107,7 @@ const Navbar = () => {
               </a>
               <ul className="dropdown-menu">
                 {plumbingServices.map((item, index) => (
-                  <li>
+                  <li key={index}>
                     <span>{item.icon}</span>
                     <a className="dropdown-item" href="services">
                       {item.name}
