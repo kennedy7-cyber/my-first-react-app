@@ -1,42 +1,69 @@
+
 import React from "react";
 
 const Footer = () => {
   return (
-    <div>
-
-    {/* Footer */}
-    <footer className="bg-dark text-light pt-5">
+    <footer className="bg-dark text-light pt-5 mt-5 shadow-lg">
       <div className="container">
-        <div className="row">
-          <div className="col-md-4 mb-3">
-            <h6>Contact</h6>
-            <p>📞 123‑456‑7890<br />✉️ email@plumbing.com</p>
-            <p>Serving: [Your City/Region]</p>
+        <div className="row pb-4 border-bottom border-secondary">
+          {/* Contact Info */}
+          <div className="col-md-4 mb-4">
+            <h5 className="fw-bold text-warning">📍 Contact</h5>
+            <p className="small lh-lg">
+              📞 <strong>0758849440</strong><br />
+              ✉️ <a href="mailto:email@plumbing.com" className="text-decoration-none text-light">email@plumbing.com</a><br />
+              <span>Serving: <strong>[wangige kabete]</strong></span>
+            </p>
           </div>
-          <div className="col-md-4 mb-3">
-            <h6>Navigate</h6>
+
+          {/* Navigation Links */}
+          <div className="col-md-4 mb-4">
+            <h5 className="fw-bold text-warning">🔗 Navigate</h5>
             <ul className="list-unstyled">
-              <li><a className="text-light" href="/">Home</a></li>
-              <li><a className="text-light" href="/about">About</a></li>
-              <li><a className="text-light" href="/services">Services</a></li>
-              <li><a className="text-light" href="/blog">Blog</a></li>
-              <li><a className="text-light" href="/contact">Contact</a></li>
+              {[
+                { name: "Home", path: "/" },
+                { name: "About", path: "/about" },
+                { name: "Services", path: "/services" },
+                { name: "Blog", path: "/blog" },
+                { name: "Contact", path: "/contact" },
+              ].map((link, index) => (
+                <li key={index} className="mb-2">
+                  <a
+                    href={link.path}
+                    className="text-light text-decoration-none hover-underline"
+                    style={{ transition: "0.3s" }}
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
-          <div className="col-md-4 mb-3">
-            <h6>Stay Updated</h6>
-            <form className="d-flex mb-3">
-              <input type="email" className="form-control me-2" placeholder="Your email" />
+
+          {/* Newsletter and Badges */}
+          <div className="col-md-4 mb-4">
+            <h5 className="fw-bold text-warning">📬 Stay Updated</h5>
+            <form className="d-flex mb-3" onSubmit={(e) => e.preventDefault()}>
+              <input
+                type="email"
+                className="form-control me-2"
+                placeholder="Your email"
+              />
               <button className="btn btn-primary">Subscribe</button>
             </form>
-            <img src="badge1.png" alt="Badge" width="50" />
-            <img src="badge2.png" alt="Badge" width="50" />
+            <div className="d-flex gap-2">
+              <img src="badge1.png" alt="Badge" width="50" height="50" />
+              <img src="badge2.png" alt="Badge" width="50" height="50" />
+            </div>
           </div>
         </div>
-        <div className="text-center py-3">&copy; 2025 Plumbing Insights</div>
+
+        {/* Bottom copyright */}
+        <div className="text-center text-secondary py-3 small">
+          &copy; {new Date().getFullYear()} <strong>Plumbing Insights</strong>. All rights reserved.
+        </div>
       </div>
     </footer>
-    </div>
   );
 };
 
