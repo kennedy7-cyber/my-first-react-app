@@ -1,7 +1,7 @@
 import React from "react";
 
 const Blogs = () => (
-  <div>
+  <div className="">
     {/* Header */}
     <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <div className="container">
@@ -79,8 +79,8 @@ const Blogs = () => (
     {/* Hero Section */}
     <section className="py-5 text-center bg-light">
       <div className="container">
-        <h1>Plumbing Insights & Industry Tips</h1>
-        <p className="lead">
+        <h1 className="">Plumbing Insights & Industry Tips</h1>
+        <p className="lead py-4">
           Expert advice for commercial, construction, and general plumbing
           projects
         </p>
@@ -264,7 +264,7 @@ const Blogs = () => (
           <img
             src="https://cdn-icons-png.flaticon.com/512/124/124034.png"
             alt="WhatsApp"
-            style={{ width: "50px", height: "50px" }}
+            style={{ width: "30px", height: "30px" }}
           />
         </a>
 
@@ -277,7 +277,7 @@ const Blogs = () => (
           <img
             src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png"
             alt="Instagram"
-            style={{ width: "50px", height: "50px" }}
+            style={{ width: "30px", height: "30px" }}
           />
         </a>
 
@@ -290,7 +290,7 @@ const Blogs = () => (
           <img
             src="https://cdn-icons-png.flaticon.com/512/145/145802.png"
             alt="Facebook"
-            style={{ width: "50px", height: "50px" }}
+            style={{ width: "30px", height: "30px" }}
           />
         </a>
   </div>
