@@ -4,9 +4,9 @@ import { Container, Row, Col, Card, Button, Modal } from "react-bootstrap";
 const About = () => {
   const [show, setShow] = React.useState(false);
   return (
-    <div className="py-4 px-5">
+    <div className="">
       <Container className="py-5">
-        <h1 className="text-center mb-4">About Our Plumbing Company</h1>
+        <h1 className="text-center mb-4">Nex Pipe tech</h1>
         <Row className="align-items-center mb-5">
           <Col md={6}>
             <img
@@ -16,7 +16,7 @@ const About = () => {
             />
           </Col>
           <Col md={6}>
-            <h2>5 Years of Trusted Service</h2>
+            <h2 className="py-4">5 Years of Trusted Service</h2>
             <p>
               We’ve served residential and commercial clients with reliable,
               affordable, and innovative plumbing solutions for the past 5
@@ -89,7 +89,7 @@ const About = () => {
         </Modal>
       </Container>
       <div className="">
-        <h1 className="text-center px-4 py-5">Our Mission</h1>
+        <h1 className="text-center ">Our Mission</h1>
         <p className="lh-lg fs-6 text-start text-end fw-medium text-center p-3 text-lowercase">
           “Our mission is to deliver prompt, high‑quality plumbing solutions
           that homeowners and businesses can rely on—every time. We uphold
@@ -100,7 +100,7 @@ const About = () => {
           relationships with our community by treating every service as if it
           were our own home.
         </p>
-        <h2 className="text-center px-5 py-4">Our Vision</h2>
+        <h2 className="text-center">Our Vision</h2>
         <p className="lh-lg fs-6 text-start text-end fw-medium text-center p-3 text-lowercase">
           We envision becoming the trusted pillar of our community, known for
           delivering impeccable plumbing solutions with unwavering integrity and
@@ -115,23 +115,21 @@ const About = () => {
           you'd like to tweak the tone or style!
         </p>
       </div>
-        {/* Company History */}
-        <div className="py-4">
-          <h1 className="text-center fw-normal text-warning-emphasis">
-            Our History
-          </h1>
-          <p className="text-center fw-light bg-danger-emphasis p-3">
-            Our plumbing company has proudly served the community for over a
-            decade, building a reputation for reliability and quality
-            workmanship. Founded by certified professionals, we began with a
-            mission to provide fast, honest, and affordable plumbing solutions.
-            We've grown through word-of-mouth, offering residential and
-            commercial services with dedication, skill, and customer
-            satisfaction.
-          </p>
-        </div>
-     
-     
+      {/* Company History */}
+      <div className="py-4">
+        <h1 className="text-center fw-normal text-warning-emphasis">
+          Our History
+        </h1>
+        <p className="text-center fw-light bg-danger-emphasis p-3">
+          Our plumbing company has proudly served the community for over a
+          decade, building a reputation for reliability and quality workmanship.
+          Founded by certified professionals, we began with a mission to provide
+          fast, honest, and affordable plumbing solutions. We've grown through
+          word-of-mouth, offering residential and commercial services with
+          dedication, skill, and customer satisfaction.
+        </p>
+      </div>
+
       {/* Floating Social Media Buttons */}
       <div
         style={{
@@ -154,7 +152,7 @@ const About = () => {
           <img
             src="https://cdn-icons-png.flaticon.com/512/124/124034.png"
             alt="WhatsApp"
-            style={{ width: "50px", height: "50px" }}
+            style={{ width: "30px", height: "30px" }}
           />
         </a>
 
@@ -167,7 +165,7 @@ const About = () => {
           <img
             src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png"
             alt="Instagram"
-            style={{ width: "50px", height: "50px" }}
+            style={{ width: "30px", height: "30px" }}
           />
         </a>
 
@@ -180,10 +178,46 @@ const About = () => {
           <img
             src="https://cdn-icons-png.flaticon.com/512/145/145802.png"
             alt="Facebook"
-            style={{ width: "50px", height: "50px" }}
+            style={{ width: "30px", height: "30px" }}
           />
         </a>
-  </div>
+      </div>
+
+      <h5 className="text-center">
+        {" "}
+        🛠️ About Nex Pipe Tech: Innovating Plumbing Solutions
+      </h5>
+      <p className="p-3">
+        Nex Pipe Tech was founded by veteran plumbers who spotted a gap in the
+        market for combining traditional craftsmanship with advanced diagnostic
+        technology. The team, led by founder and CEO kennedy irungu, brings over
+        6years of experience managing complex residential and commercial
+        plumbing projects across Kenya. Backed by a core group of five
+        specialists in pipe inspection, leak detection, and green plumbing
+        systems, Nex Pipe Tech emphasizes efficiency, sustainability, and
+        customer trust. Their mission centers on using real-time diagnostics and
+        eco-friendly materials to minimize water waste and reduce long-term
+        maintenance costs. Since launching in 2023, the company has grown
+        steadily, earning accolades for its responsive service and technical
+        innovation in the plumbing industry
+      </p>
+      <h6 className="text-center">🏆 Nex Pipe Tech: Six-Year Milestone of Excellence</h6>
+      <p>
+        Over the past six years, Nex Pipe Tech has steadily established itself
+        as a premier provider of advanced plumbing solutions, completing over
+        1,200 residential and commercial projects across Kenya. During this
+        period, the company pioneered the integration of green plumbing
+        systems—such as low-flow fixtures and real-time leak
+        detection—solidifying its reputation for sustainability and innovation.
+        In its third year, Nex Pipe Tech expanded its service capabilities by
+        launching a 24/7 emergency response unit, cutting average repair times
+        by 40%. The team’s dedication to professional growth is evident through
+        ongoing certification in emerging technologies, mirroring Kenya’s
+        growing demand for certified plumbers prabeshgroup.com +2
+        nextechacademy.com +2 servicetitan.com +2 . Today, Nex Pipe Tech proudly
+        serves a broad client base, from homeowners to large-scale developers,
+        while maintaining a 95% customer satisfaction rate.
+      </p>
     </div>
   );
 };

@@ -73,8 +73,8 @@ const Services = () => {
   
   return ( 
     <div className="container py-5">
-      <h2 className="text-center mb-4">Our Plumbing Services</h2>
-      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <h2 className="text-center mb-4 py-5 p-5">Our Plumbing Services</h2>
+      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3  ">
         {services.map((svc, idx) => (
           <div className="col" key={idx}>
             <div className="card h-100 shadow-sm">
@@ -86,7 +86,7 @@ const Services = () => {
                   className="btn btn-primary mt-2"
                   onClick={() => setShowModalIndex(idx)}
                 >
-                  View Details
+                  View more
                 </button>
               </div>
             </div>
@@ -158,7 +158,7 @@ const Services = () => {
           <img
             src="https://cdn-icons-png.flaticon.com/512/124/124034.png"
             alt="WhatsApp"
-            style={{ width: "50px", height: "50px" }}
+            style={{ width: "30px", height: "30px" }}
           />
         </a>
 
@@ -171,7 +171,7 @@ const Services = () => {
           <img
             src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png"
             alt="Instagram"
-            style={{ width: "50px", height: "50px" }}
+            style={{ width: "30px", height: "30px" }}
           />
         </a>
 
@@ -184,7 +184,7 @@ const Services = () => {
           <img
             src="https://cdn-icons-png.flaticon.com/512/145/145802.png"
             alt="Facebook"
-            style={{ width: "50px", height: "50px" }}
+            style={{ width: "30px", height: "30px" }}
           />
         </a>
   </div>

@@ -6,7 +6,7 @@ const Contact = () => {
     <div className="position-relative">
       <div className="container py-5 px-4 mb-5">
         <h2 className="text-center text-dark fw-bold mb-4 py-5 px-3">Contact Us</h2>
-        <p className="text-center mb-5 text-muted fw-bold">
+        <p className="text-center mb-5 text-muted fw-bold  ">
           Have a plumbing issue or need a quote? Fill out the form and we’ll get back to you!
         </p>
 
@@ -56,45 +56,60 @@ const Contact = () => {
           <p><strong>Location:</strong> Kiambu Wangige, Kenya</p>
         </div>
       </div>
-      {/* Floating Social Buttons - WhatsApp & Instagram */}
-<div
-  style={{
-    position: "fixed",
-    right: "20px",
-    top: "50%",
-    transform: "translateY(-50%)",
-    zIndex: 1000,
-    display: "flex",
-    flexDirection: "column",
-    gap: "15px",
-    alignItems: "center",
-  }}
->
-  <a
-    href="https://wa.me/254758849440"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img
-      src="https://cdn-icons-png.flaticon.com/512/124/124034.png"
-      alt="WhatsApp"
-      style={{ width: "60px", height: "60px" }}
-    />
-  </a>
 
-  <a
-    href="https://instagram.com/your_instagram_username" // <-- Replace with your handle
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img
-      src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
-      alt="Instagram"
-      style={{ width: "60px", height: "60px" }}
-    />
-  </a>
-</div>
 
+      {/* Floating Social Media Buttons */}
+      <div
+        style={{
+          position: "fixed",
+          right: "20px",
+          top: "45%",
+          transform: "translateY(-50%)",
+          display: "flex",
+          flexDirection: "column",
+          gap: "15px",
+          zIndex: 1000,
+        }}
+      >
+        {/* WhatsApp */}
+        <a
+          href="https://wa.me/254758849440"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/124/124034.png"
+            alt="WhatsApp"
+            style={{ width: "30px", height: "30px" }}
+          />
+        </a>
+
+        {/* Instagram */}
+        <a
+          href="https://instagram.com/yourplumbingpage"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png"
+            alt="Instagram"
+            style={{ width: "30px", height: "30px" }}
+          />
+        </a>
+
+        {/* Facebook */}
+        <a
+          href="https://facebook.com/yourplumbingpage"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/145/145802.png"
+            alt="Facebook"
+            style={{ width: "30px", height: "30px" }}
+          />
+        </a>
+      </div>
     </div>
   );
 };
